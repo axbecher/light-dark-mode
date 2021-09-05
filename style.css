@@ -28,6 +28,7 @@ html {
 
 body {
   margin: 0;
+  
   color:var(--on-background);
   font-family: Comfortaa, sans-serif;
   background-color: var(--background);
@@ -88,6 +89,8 @@ a {
 /* About Section */
 .about-container {
   display: flex;
+  
+  
 }
 
 .image-container {
@@ -98,6 +101,10 @@ a {
   width: auto;
   background: var(--background);
   box-shadow: var(--box-shadow);
+}
+
+.image-container:hover{
+  background-color: var(--primary-variant);
 }
 
 img {
@@ -120,6 +127,7 @@ button {
   border: 2px solid var(--primary-color);
   font-size: 15px;
   outline: none;
+  margin: auto;
 }
 
 button:disabled {
@@ -167,9 +175,12 @@ button:hover:not(.outline) {
 }
 
 p {
-  margin: 0;
+  margin: auto;
   line-height: 25px;
 }
+
+h1{margin: auto;}
+
 
 /* Contact Section */
 .fab {
@@ -257,4 +268,42 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+}
+
+@media (max-width: 1100px) {
+  .about-container {
+    display:grid;
+    margin: 2rem auto 2rem auto;
+    width: 100%;
+  }
+  .image-container{
+    flex: 25%;
+    width: 250px;
+    height: 380px;
+    padding: 0 4px;
+    margin: 3px auto 3px auto;
+  }
+  
+  img, h2{
+    margin-top: 8px;
+    margin: auto;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .buttons, .social-icons, #nav{
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;  
+  }
+
+  h1{
+    font-size: 40px;
+  }
+  #nav a{
+    font-size:15px;
+    
+  } 
+  
+  
+  
 }
